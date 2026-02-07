@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MediCall Dashboard - Manage your health">
+    <meta name="theme-color" content="#A3D9A5">
+    <title>Dashboard - MediCall</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <!-- User Avatar Button -->
+                <button class="avatar-button" onclick="openSidebar()" aria-label="Open menu sidebar">
+                    <img src="images/avatar.png" alt="User profile" class="avatar-img">
+                    <div class="avatar-text">
+                        <p class="avatar-greeting">Welcome back!</p>
+                        <p class="avatar-subtext">Good to see you</p>
+                    </div>
+                </button>
+
+                <!-- Language Toggle -->
+                <button class="language-button" aria-label="Change language">
+                    <i data-lucide="globe" width="24" height="24"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <div id="sidebarBackdrop" class="sidebar-backdrop hidden" onclick="closeSidebar()"></div>
+        <aside id="sidebar" class="sidebar" role="navigation" aria-label="Navigation sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Menu</h2>
+                <button class="close-button" onclick="closeSidebar()" aria-label="Close sidebar">
+                    <i data-lucide="x" width="24" height="24"></i>
+                </button>
+            </div>
+
+            <!-- User Profile Section -->
+            <div class="sidebar-profile">
+                <img src="images/avatar.png" alt="User profile" class="sidebar-avatar">
+                <div>
+                    <h3 class="sidebar-user-name">John Doe</h3>
+                    <p class="sidebar-user-email">john.doe@example.com</p>
+                </div>
+            </div>
+
+            <!-- Menu Options -->
+            <nav class="sidebar-nav">
+                <button class="menu-item">
+                    <i data-lucide="user" width="20" height="20" class="menu-icon"></i>
+                    <span class="menu-text">Profile Settings</span>
+                </button>
+
+                <button class="menu-item">
+                    <i data-lucide="settings" width="20" height="20" class="menu-icon"></i>
+                    <span class="menu-text">General Settings</span>
+                </button>
+
+                <button class="menu-item">
+                    <i data-lucide="help-circle" width="20" height="20" class="menu-icon"></i>
+                    <span class="menu-text">Help & Support</span>
+                </button>
+
+                <!-- Dyslexia Font Toggle -->
+                <div class="divider"></div>
+                <div class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <span class="toggle-label">Dyslexia Friendly Font</span>
+                        <label class="switch">
+                            <input type="checkbox" id="dyslexiaToggle" onchange="toggleDyslexiaFont()" role="switch"
+                                aria-label="Toggle dyslexia friendly font">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p class="toggle-description">
+                        Switch to a font designed for easier reading
+                    </p>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Government Health IDs Section -->
+            <section class="section">
+                <h2 class="section-title">Government Health IDs</h2>
+                <div class="health-cards-container">
+                    <!-- Aadhaar Card -->
+                    <div class="health-card mint">
+                        <div class="card-decoration card-decoration-1"></div>
+                        <div class="card-decoration card-decoration-2"></div>
+                        <div class="card-content">
+                            <div class="card-chip">
+                                <i data-lucide="credit-card" width="40" height="40"></i>
+                            </div>
+                            <h3 class="card-name">Aadhaar Card</h3>
+                            <p class="card-number">1234 5678 9012</p>
+                            <div class="card-qr-wrapper">
+                                <div class="card-qr">
+                                    <i data-lucide="qr-code" width="48" height="48" style="color: #1f2937;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ayushman Bharat Card -->
+                    <div class="health-card blue">
+                        <div class="card-decoration card-decoration-1"></div>
+                        <div class="card-decoration card-decoration-2"></div>
+                        <div class="card-content">
+                            <div class="card-chip">
+                                <i data-lucide="credit-card" width="40" height="40"></i>
+                            </div>
+                            <h3 class="card-name">Ayushman Bharat</h3>
+                            <p class="card-number">AB-9876-5432-1234</p>
+                            <div class="card-qr-wrapper">
+                                <div class="card-qr">
+                                    <i data-lucide="qr-code" width="48" height="48" style="color: #1f2937;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medicine Tracker Section -->
+            <section class="section medicine-tracker">
+                <h2 class="section-title">Today's Medication</h2>
+                <div class="tracker-card">
+                    <div class="medicine-list">
+                        <!-- Medicine Item 1 - Taken -->
+                        <div class="medicine-item taken">
+                            <div class="medicine-info-wrapper">
+                                <div class="pill-icon taken">
+                                    <i data-lucide="pill" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h4 class="medicine-name">Aspirin</h4>
+                                    <p class="medicine-time">8:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="check-icon">
+                                <i data-lucide="check" width="20" height="20"></i>
+                            </div>
+                        </div>
+
+                        <!-- Medicine Item 2 - Taken -->
+                        <div class="medicine-item taken">
+                            <div class="medicine-info-wrapper">
+                                <div class="pill-icon taken">
+                                    <i data-lucide="pill" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h4 class="medicine-name">Vitamin D</h4>
+                                    <p class="medicine-time">8:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="check-icon">
+                                <i data-lucide="check" width="20" height="20"></i>
+                            </div>
+                        </div>
+
+                        <!-- Medicine Item 3 - Pending -->
+                        <div class="medicine-item">
+                            <div class="medicine-info-wrapper">
+                                <div class="pill-icon pending">
+                                    <i data-lucide="pill" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h4 class="medicine-name">Metformin</h4>
+                                    <p class="medicine-time">2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Medicine Item 4 - Pending -->
+                        <div class="medicine-item">
+                            <div class="medicine-info-wrapper">
+                                <div class="pill-icon pending">
+                                    <i data-lucide="pill" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h4 class="medicine-name">Lisinopril</h4>
+                                    <p class="medicine-time">8:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Completion Progress -->
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-title">Course Completion</span>
+                            <span class="progress-percentage">50%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                        <p class="progress-text">2 of 4 medications taken today</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="bottom-nav-content">
+                <!-- Home Button -->
+                <button class="nav-button" onclick="window.location.reload()" aria-label="Home">
+                    <i data-lucide="home" width="28" height="28"></i>
+                    <span class="nav-label">Home</span>
+                </button>
+
+                <!-- Camera FAB -->
+                <button class="camera-fab" aria-label="Scan document or medicine">
+                    <i data-lucide="camera" width="32" height="32" style="color: white;"></i>
+                </button>
+
+                <!-- SOS Button -->
+                <button class="sos-button pulse-animation" onclick="handleSOS()" aria-label="Emergency SOS">
+                    <div class="sos-icon-wrapper">
+                        <i data-lucide="alert-circle" width="28" height="28" style="color: white;"></i>
+                    </div>
+                    <span class="sos-label">SOS</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

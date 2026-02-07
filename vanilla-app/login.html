@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to MediCall">
+    <title>Login - MediCall</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="login-card">
+            <!-- Header -->
+            <div class="login-header">
+                <h2 class="login-title" id="authTitle">Welcome Back</h2>
+                <p class="login-subtitle" id="authSubtitle">Sign in to continue</p>
+            </div>
+
+            <!-- Login/Signup Form -->
+            <form id="authForm" onsubmit="handleSubmit(event)">
+                <!-- Name Field (Hidden for login) -->
+                <div class="form-group hidden" id="nameGroup">
+                    <label for="name" class="form-label">Full Name</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon icon-user"></span>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name">
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon icon-mail"></span>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email"
+                            required>
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon icon-lock"></span>
+                        <input type="password" id="password" name="password" class="form-input"
+                            placeholder="Enter your password" required>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-continue">
+                    Continue
+                </button>
+            </form>
+
+            <!-- Toggle Between Login and Signup -->
+            <div class="toggle-auth">
+                <button type="button" onclick="toggleAuthMode()" id="toggleButton">
+                    Don't have an account? Sign Up
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
