@@ -6,7 +6,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
     return (
         <>
-            {/* Backdrop */}
+            {}
             {isOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity"
@@ -15,7 +15,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 />
             )}
 
-            {/* Sidebar */}
+            {}
             <aside
                 className={`fixed top-0 left-0 h-full w-80 bg-white shadow-elevated z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     }`}
@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 role="navigation"
             >
                 <div className="p-6 h-full flex flex-col">
-                    {/* Header */}
+                    {}
                     <div className="flex items-center justify-between mb-8">
                         <h2 className="text-2xl font-bold text-deep-black">Menu</h2>
                         <button
@@ -35,7 +35,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                         </button>
                     </div>
 
-                    {/* User Profile Section */}
+                    {}
                     <div className="flex items-center space-x-4 mb-8 pb-6 border-b border-gray-200">
                         <img
                             src="/avatar.png"
@@ -48,7 +48,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                         </div>
                     </div>
 
-                    {/* Menu Options */}
+                    {}
                     <nav className="flex-1 space-y-2">
                         <button className="w-full flex items-center space-x-3 px-4 py-3 rounded-card hover:bg-mint-100 transition-all text-left">
                             <User size={20} className="text-mint-600" />
@@ -65,7 +65,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                             <span className="font-medium text-deep-black">Help & Support</span>
                         </button>
 
-                        {/* Dyslexia Font Toggle */}
+                        {}
                         <div className="pt-4 border-t border-gray-200 mt-4">
                             <div className="flex items-center justify-between px-4 py-3">
                                 <span className="font-medium text-deep-black">Dyslexia Friendly Font</span>

@@ -1,9 +1,7 @@
-/* Medical App - Vanilla CSS */
 
-/* Import OpenDyslexic font */
+
 @import url('https://fonts.cdnfonts.com/css/opendyslexic');
 
-/* CSS Variables */
 :root {
     --color-mint-50: #f0fdf4;
     --color-mint-100: #dcfce7;
@@ -26,7 +24,6 @@
     --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +39,6 @@ body {
     min-height: 100vh;
 }
 
-/* Dyslexia-friendly font */
 body.dyslexia-font,
 body.dyslexia-font * {
     font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
@@ -52,7 +48,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Utility Classes */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -63,7 +58,6 @@ html {
     display: none !important;
 }
 
-/* Animations */
 @keyframes pulse-glow {
 
     0%,
@@ -100,7 +94,6 @@ html {
     }
 }
 
-/* ========== GET STARTED PAGE ========== */
 .get-started {
     min-height: 100vh;
     display: flex;
@@ -170,7 +163,6 @@ html {
     transform: translateY(-2px);
 }
 
-/* ========== LOGIN PAGE ========== */
 .login-page {
     min-height: 100vh;
     background: linear-gradient(to bottom right, var(--color-mint-100), white);
@@ -284,14 +276,12 @@ html {
     text-decoration: underline;
 }
 
-/* ========== DASHBOARD ========== */
 .dashboard {
     min-height: 100vh;
     background-color: #f9fafb;
     padding-bottom: 100px;
 }
 
-/* Header */
 .header {
     position: sticky;
     top: 0;
@@ -366,7 +356,6 @@ html {
     outline: 2px solid var(--color-mint-500);
 }
 
-/* Sidebar */
 .sidebar-backdrop {
     position: fixed;
     inset: 0;
@@ -502,7 +491,6 @@ html {
     color: var(--color-deep-black);
 }
 
-/* Toggle Switch */
 .switch {
     position: relative;
     display: inline-block;
@@ -554,7 +542,6 @@ input:checked+.slider:before {
     padding: 0 1rem;
 }
 
-/* Main Content */
 .main-content {
     padding: 1.5rem 0;
 }
@@ -571,7 +558,6 @@ input:checked+.slider:before {
     padding: 0 1.5rem;
 }
 
-/* Health ID Cards */
 .health-cards-container {
     display: flex;
     gap: 1rem;
@@ -666,7 +652,6 @@ input:checked+.slider:before {
     border-radius: 0.5rem;
 }
 
-/* Medicine Tracker */
 .medicine-tracker {
     padding: 0 1.5rem;
 }
@@ -779,7 +764,6 @@ input:checked+.slider:before {
     color: #6b7280;
 }
 
-/* Bottom Navigation */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -884,7 +868,6 @@ input:checked+.slider:before {
     color: var(--color-danger-red);
 }
 
-/* Responsive Design */
 @media (max-width: 640px) {
     .hero-title {
         font-size: 1.875rem;
@@ -900,7 +883,6 @@ input:checked+.slider:before {
     }
 }
 
-/* Icon Styles (using Unicode symbols as fallback) */
 .icon {
     display: inline-block;
     width: 24px;

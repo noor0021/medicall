@@ -1,9 +1,6 @@
-/* Medical App - Vanilla CSS */
 
-/* Import OpenDyslexic font */
 @import url('https://fonts.cdnfonts.com/css/opendyslexic');
 
-/* CSS Variables */
 :root {
     --color-mint-50: #f0fdf4;
     --color-mint-100: #dcfce7;

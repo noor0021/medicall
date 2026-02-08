@@ -9,7 +9,6 @@ const MedicineTracker = () => {
         { id: 4, name: 'Lisinopril', time: '8:00 PM', taken: false },
     ]);
 
-    // Calculate completion percentage
     const takenCount = medications.filter((med) => med.taken).length;
     const completionPercentage = (takenCount / medications.length) * 100;
 

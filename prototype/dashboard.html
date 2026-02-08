@@ -8,16 +8,16 @@
     <meta name="theme-color" content="#A3D9A5">
     <title>Dashboard - MediCall</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Lucide Icons CDN -->
+    
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
     <div class="dashboard">
-        <!-- Header -->
+        
         <header class="header">
             <div class="header-content">
-                <!-- User Avatar Button -->
+                
                 <button class="avatar-button" onclick="openSidebar()" aria-label="Open menu sidebar">
                     <img src="images/avatar.png" alt="User profile" class="avatar-img">
                     <div class="avatar-text">
@@ -26,14 +26,12 @@
                     </div>
                 </button>
 
-                <!-- Language Toggle -->
                 <button class="language-button" aria-label="Change language">
                     <i data-lucide="globe" width="24" height="24"></i>
                 </button>
             </div>
         </header>
 
-        <!-- Sidebar -->
         <div id="sidebarBackdrop" class="sidebar-backdrop hidden" onclick="closeSidebar()"></div>
         <aside id="sidebar" class="sidebar" role="navigation" aria-label="Navigation sidebar">
             <div class="sidebar-header">
@@ -43,7 +41,6 @@
                 </button>
             </div>
 
-            <!-- User Profile Section -->
             <div class="sidebar-profile">
                 <img src="images/avatar.png" alt="User profile" class="sidebar-avatar">
                 <div>
@@ -52,7 +49,6 @@
                 </div>
             </div>
 
-            <!-- Menu Options -->
             <nav class="sidebar-nav">
                 <button class="menu-item">
                     <i data-lucide="user" width="20" height="20" class="menu-icon"></i>
@@ -69,7 +65,6 @@
                     <span class="menu-text">Help & Support</span>
                 </button>
 
-                <!-- Dyslexia Font Toggle -->
                 <div class="divider"></div>
                 <div class="toggle-section">
                     <div class="toggle-wrapper">
@@ -87,13 +82,12 @@
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
-            <!-- Government Health IDs Section -->
+            
             <section class="section">
                 <h2 class="section-title">Government Health IDs</h2>
                 <div class="health-cards-container">
-                    <!-- Aadhaar Card -->
+                    
                     <div class="health-card mint">
                         <div class="card-decoration card-decoration-1"></div>
                         <div class="card-decoration card-decoration-2"></div>
@@ -111,7 +105,6 @@
                         </div>
                     </div>
 
-                    <!-- Ayushman Bharat Card -->
                     <div class="health-card blue">
                         <div class="card-decoration card-decoration-1"></div>
                         <div class="card-decoration card-decoration-2"></div>
@@ -131,12 +124,11 @@
                 </div>
             </section>
 
-            <!-- Medicine Tracker Section -->
             <section class="section medicine-tracker">
                 <h2 class="section-title">Today's Medication</h2>
                 <div class="tracker-card">
                     <div class="medicine-list">
-                        <!-- Medicine Item 1 - Taken -->
+                        
                         <div class="medicine-item taken">
                             <div class="medicine-info-wrapper">
                                 <div class="pill-icon taken">
@@ -152,7 +144,6 @@
                             </div>
                         </div>
 
-                        <!-- Medicine Item 2 - Taken -->
                         <div class="medicine-item taken">
                             <div class="medicine-info-wrapper">
                                 <div class="pill-icon taken">
@@ -168,7 +159,6 @@
                             </div>
                         </div>
 
-                        <!-- Medicine Item 3 - Pending -->
                         <div class="medicine-item">
                             <div class="medicine-info-wrapper">
                                 <div class="pill-icon pending">
@@ -181,7 +171,6 @@
                             </div>
                         </div>
 
-                        <!-- Medicine Item 4 - Pending -->
                         <div class="medicine-item">
                             <div class="medicine-info-wrapper">
                                 <div class="pill-icon pending">
@@ -195,7 +184,6 @@
                         </div>
                     </div>
 
-                    <!-- Course Completion Progress -->
                     <div class="progress-section">
                         <div class="progress-header">
                             <span class="progress-title">Course Completion</span>
@@ -210,21 +198,18 @@
             </section>
         </main>
 
-        <!-- Bottom Navigation -->
         <nav class="bottom-nav">
             <div class="bottom-nav-content">
-                <!-- Home Button -->
+                
                 <button class="nav-button" onclick="window.location.reload()" aria-label="Home">
                     <i data-lucide="home" width="28" height="28"></i>
                     <span class="nav-label">Home</span>
                 </button>
 
-                <!-- Camera FAB -->
                 <button class="camera-fab" aria-label="Scan document or medicine">
                     <i data-lucide="camera" width="32" height="32" style="color: white;"></i>
                 </button>
 
-                <!-- SOS Button -->
                 <button class="sos-button pulse-animation" onclick="handleSOS()" aria-label="Emergency SOS">
                     <div class="sos-icon-wrapper">
                         <i data-lucide="alert-circle" width="28" height="28" style="color: white;"></i>

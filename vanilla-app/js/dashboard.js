@@ -1,6 +1,5 @@
-// Dashboard JavaScript
 
-// Sidebar Functions
+
 function openSidebar() {
     const sidebar = document.getElementById('sidebar');
     const backdrop = document.getElementById('sidebarBackdrop');
@@ -17,7 +16,6 @@ function closeSidebar() {
     backdrop.classList.add('hidden');
 }
 
-// Dyslexia Font Toggle
 function toggleDyslexiaFont() {
     const toggle = document.getElementById('dyslexiaToggle');
     const body = document.body;
@@ -31,15 +29,13 @@ function toggleDyslexiaFont() {
     }
 }
 
-// SOS Button Handler
 function handleSOS() {
-    // In a real app, this would trigger emergency services
+    
     alert('🚨 Emergency services contacted! Help is on the way.');
 }
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function () {
-    // Load dyslexia font preference from localStorage
+    
     const dyslexiaPreference = localStorage.getItem('dyslexiaFont');
     const toggle = document.getElementById('dyslexiaToggle');
 
@@ -48,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('dyslexia-font');
     }
 
-    // Close sidebar when pressing Escape key
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             closeSidebar();

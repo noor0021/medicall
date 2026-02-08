@@ -13,7 +13,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // In a real app, handle authentication here
+        
         navigate('/dashboard');
     };
 
@@ -24,7 +24,7 @@ const Login = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-mint-100 to-white flex items-center justify-center p-6">
             <div className="bg-white rounded-card shadow-soft-lg p-8 w-full max-w-md">
-                {/* Header */}
+                {}
                 <div className="text-center mb-8">
                     <h2 className="text-3xl font-bold text-deep-black mb-2">
                         {isSignup ? 'Create Account' : 'Welcome Back'}
@@ -34,9 +34,9 @@ const Login = () => {
                     </p>
                 </div>
 
-                {/* Form */}
+                {}
                 <form onSubmit={handleSubmit} className="space-y-5">
-                    {/* Name field - only for signup */}
+                    {}
                     {isSignup && (
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-deep-black mb-2">
@@ -58,7 +58,7 @@ const Login = () => {
                         </div>
                     )}
 
-                    {/* Email field */}
+                    {}
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-deep-black mb-2">
                             Email
@@ -78,7 +78,7 @@ const Login = () => {
                         </div>
                     </div>
 
-                    {/* Password field */}
+                    {}
                     <div>
                         <label htmlFor="password" className="block text-sm font-medium text-deep-black mb-2">
                             Password
@@ -98,7 +98,7 @@ const Login = () => {
                         </div>
                     </div>
 
-                    {/* Submit button */}
+                    {}
                     <button
                         type="submit"
                         className="w-full bg-deep-black text-white py-3 rounded-card font-semibold text-lg hover:bg-gray-800 transition-all shadow-soft mt-6"
@@ -107,7 +107,7 @@ const Login = () => {
                     </button>
                 </form>
 
-                {/* Toggle between login and signup */}
+                {}
                 <div className="mt-6 text-center">
                     <button
                         onClick={() => setIsSignup(!isSignup)}

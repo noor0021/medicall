@@ -4,7 +4,7 @@ const Header = ({ onAvatarClick }) => {
     return (
         <header className="sticky top-0 z-40 bg-white shadow-soft px-6 py-4">
             <div className="flex items-center justify-between">
-                {/* Left: User Avatar */}
+                {}
                 <button
                     onClick={onAvatarClick}
                     className="flex items-center space-x-3 hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-mint-500 rounded-full"
@@ -21,7 +21,7 @@ const Header = ({ onAvatarClick }) => {
                     </div>
                 </button>
 
-                {/* Right: Language toggle */}
+                {}
                 <button
                     className="p-3 rounded-full hover:bg-mint-100 transition-all focus:outline-none focus:ring-2 focus:ring-mint-500"
                     aria-label="Change language"

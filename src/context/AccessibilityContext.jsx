@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect } from 'react';
 
 const AccessibilityContext = createContext();
@@ -12,7 +13,7 @@ export const useAccessibility = () => {
 
 export const AccessibilityProvider = ({ children }) => {
     const [isDyslexiaFont, setIsDyslexiaFont] = useState(() => {
-        // Load preference from localStorage
+
         const saved = localStorage.getItem('dyslexiaFont');
         return saved === 'true';
     });
@@ -26,7 +27,7 @@ export const AccessibilityProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        // Apply or remove dyslexia font class to document
+
         if (isDyslexiaFont) {
             document.documentElement.classList.add('font-dyslexic');
         } else {
